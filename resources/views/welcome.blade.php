@@ -1,15 +1,30 @@
 <x-layout>
+ <div class=" space-y-10">
+    
+  <section class=" ">
+    <x-section-head>featured jobs</x-section-head>
  
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-
-
-      
-
-      <div class=" grid  grid-cols-6 w-full gap-3">
-          <div class=" bg-red-500 w-full h-[300px] col-span-1 text-white" > category</div>
-          <div class=" bg-blue-600 w-full h-[300px] col-span-4 text-white"> brand</div>
-          <div class=" bg-yellow-600 w-full h-[300px] col-span-1 text-white">Hello</div>
-      </div>
+       <div class=" grid grid-cols-3 w-full mt-3 gap-4">
+         <x-job-card/>
+         <x-job-card/>
+         <x-job-card/>
+       </div>
+   </section>
+ 
+      <section>
+         <x-section-head>Tags</x-section-head>
+         <div  class=" mt-6 space-x-4">
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+            <x-tag>Tag</x-tag>
+         </div>
+      </section>
+      <section>
+         <x-section-head>Recent Jobs</x-section-head>
+      </section>
+ </div>
 </x-layout>

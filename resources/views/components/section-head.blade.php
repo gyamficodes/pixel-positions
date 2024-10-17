@@ -1,0 +1,1 @@
+<h3 class="  capitalize inline-flex items-center gap-2 font-bold text-lg"> <span class=" w-2 h-2 bg-white inline-block"></span> {{$slot}}</h3>
