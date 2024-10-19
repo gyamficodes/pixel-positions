@@ -1,15 +1,15 @@
 <div class="  flex bg-white/5 gap-6  border py-4  rounded-xl  px-4">
  <div>
-    <img class=" rounded-3xl" src="http://placehold.it/95/95" alt="">
+    <x-employer-logo :width="90"/>
  
  </div>
-    <div class=" flex-1">
-        <a href="" class=" self-start  text-sm">
+    <div class=" flex-1 flex flex-col">
+        <a href="" class=" self-start  text-sm text-gray-400">
             Laracast
         </a>
       
-            <h3>Video Producer</h3>
-            <p>Full Time $60,000,000</p>
+            <h3 class=" text-xl mt-3 font-bold">Video Producer</h3>
+            <p class=" text-sm text-gray-400 mt-auto">Full Time $60,000,000</p>
      
     </div>
  

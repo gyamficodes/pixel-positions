@@ -13,7 +13,7 @@
             <x-tag>Tag</x-tag>
             <x-tag>Tag</x-tag>
         </div>
-        <img class=" rounded-3xl" src="http://placehold.it/42/42" alt="">
+        <x-employer-logo :width="42"/>
 
     </div>
 
