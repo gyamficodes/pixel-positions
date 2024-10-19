@@ -9,25 +9,30 @@
 </head>
 <body class=" bg-black text-white ">
     <div class=" px-10">
-         <nav class=" flex  items-center justify-between  border-b border-white/25 py-4 ">
-            <div>
-                <a href="/">
-                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Logo">
-                </a>
+         <nav class="  border-b border-white/25 py-4 ">
+            <div class=" w-[97%] lg:w-[80%] mx-auto h-full">
+               <div class="flex  items-center justify-between ">
+                <div>
+                    <a href="/">
+                        <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Logo">
+                    </a>
+                </div>
+                <div class=" float-start items-center space-x-2 font-[700]">
+                    <a href="">Jobs</a>
+                    <a href="">Careers</a>
+                    <a href="">Salaries</a>
+                    <a href="">Companies</a>
+                </div>
+                <div>
+                    <a href="">Post A Job</a>
+                </div>
+               </div>
             </div>
-            <div class=" float-start items-center space-x-2 font-[700]">
-                <a href="">Jobs</a>
-                <a href="">Careers</a>
-                <a href="">Salaries</a>
-                <a href="">Companies</a>
-            </div>
-            <div>
-                <a href="">Post A Job</a>
-            </div>
+       
          </nav>
 
 
-         <main class=" mt-10 mx-w-[986px]">
+         <main class=" mt-10  w-[97%] lg:w-[80%] mx-auto">
         {{$slot}}
          </main>
     </div>

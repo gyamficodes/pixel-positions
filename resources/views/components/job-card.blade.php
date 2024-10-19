@@ -1,4 +1,4 @@
-<div class="  flex bg-white/5 flex-col  text-center rounded-xl  px-4">
+<div class="  flex bg-white/5 flex-col border py-4 text-center rounded-xl  px-4">
       
     <div class=" self-start  text-sm">
         Laracast
