@@ -1,7 +1,13 @@
 <x-layout>
  <div class=" space-y-10">
-    
-  <section class=" ">
+     <section class=" text-center pt-6">
+       <h1 class="  capitalize text-[20px] text-white text-center mb-3 ">let`s find your next job</h1>
+       <div>
+         <input type="text" placeholder="Web Developer..." class=" rounded-xl  border border-white/5 bg-white/5 w-full max-w-lg px-5 py-4">
+       </div>
+     </section>
+
+  <section class="  pt-10">
     <x-section-head>featured jobs</x-section-head>
  
        <div class=" grid grid-cols-3 w-full mt-3 gap-4">
