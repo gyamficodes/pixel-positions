@@ -1,3 +1,4 @@
+@props(['job'])
 <div class="  flex bg-white/5 gap-6  border py-4  rounded-xl  group px-4 order border-transparent hover:border-blue-800  transition-all duration-3.000 ease ">
  <div>
     <x-employer-logo :width="90"/>
@@ -15,9 +16,9 @@
  
   
         <div>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
-            <x-tag>Tag</x-tag>
+            @foreach($job->tag as $tag)
+            <x-tag :tag="$tag" >Backend</x-tag>
+            @endforeach
         </div>
 
 </div>

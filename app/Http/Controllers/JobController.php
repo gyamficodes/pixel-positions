@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Job;
+use App\Models\Tag;
 use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 
@@ -13,9 +14,15 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = Job::all();
+        $tags = Tag::all();
+    
+        return view('jobs.index', [
+            'jobs' => $jobs,
+            'tags' => $tags
+        ]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */
