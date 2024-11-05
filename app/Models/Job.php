@@ -13,14 +13,15 @@ class Job extends Model
     protected $table = 'jobs';
     protected $fillable = ['title','salary','type','url','featured' ,'location','employer_id'];
      
-      public function Tag(string $name){
-          $tag  = Tag::firstOrCreate(['name' => $name]);
-          $this->tags()->attach($tag);
-      }
-
-      public function tags(): BelongsToMany{
-        return   $this->belongsToMany(Tag::class);
-      }
+    public function tag(string $name): void
+    {
+        $tag = Tag::firstOrCreate(['name' => $name]);
+        $this->tags()->attach($tag);
+    }
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 
     public function employer(): BelongsTo
     {

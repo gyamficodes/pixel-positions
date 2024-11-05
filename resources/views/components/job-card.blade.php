@@ -10,9 +10,9 @@
     </div>
     <div class=" flex items-center !justify-between  ">
         <div>
-            @foreach($job->tag as $tag)
-            <x-tag :tag="$tag" size="small">Backend</x-tag>
-            @endforeach
+            @foreach($job->tags as $tag)
+            <x-tag :tag="$tag" size="small">{{ $tag->name }}</x-tag>
+        @endforeach
         </div>
         <x-employer-logo :width="42"/>
 

@@ -16,9 +16,10 @@
  
   
         <div>
-            @foreach($job->tag as $tag)
-            <x-tag :tag="$tag" >Backend</x-tag>
-            @endforeach
+            @foreach($job->tags as $tag)
+            <x-tag :$tag />
+        @endforeach
+        
         </div>
 
 </div>
