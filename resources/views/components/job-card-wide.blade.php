@@ -6,11 +6,11 @@
  </div>
     <div class=" flex-1 flex flex-col">
         <a href="" class=" self-start  text-sm text-gray-400">
-            Laracast
+            {{$job->employer->name}}
         </a>
       
-            <h3 class=" text-xl mt-3 font-bold group-hover:text-blue-800 transition-colors duration-300 ease ">Video Producer</h3>
-            <p class=" text-sm text-gray-400 mt-auto">Full Time $60,000,000</p>
+            <h3 class=" text-xl mt-3 font-bold group-hover:text-blue-800 transition-colors duration-300 ease ">{{ $job->title }}</h3>
+            <p class=" text-sm text-gray-400 mt-auto">{{$job->salary}}</p>
      
     </div>
  
