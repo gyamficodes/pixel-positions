@@ -32,7 +32,7 @@
          </nav>
 
 
-         <main class=" mt-10  w-[97%] lg:w-[80%] mx-auto">
+         <main class=" mt-10  w-[97%] lg:w-[80%] mx-auto pb-10">
         {{$slot}}
          </main>
     </div>
