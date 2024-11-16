@@ -6,7 +6,6 @@
         <x-forms.input  label="Email" name="email" type="email"/>
        
     
-      
     
         <x-forms.button>Log In</x-forms.button>
     </x-form.form>
