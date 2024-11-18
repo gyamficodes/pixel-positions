@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class SessionController extends Controller
 {
@@ -19,7 +21,7 @@ class SessionController extends Controller
      */
     public function create()
     {
-     return view('auth.login');
+        return view('auth.login');
     }
 
     /**
@@ -27,8 +29,31 @@ class SessionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+
+        if (!Auth::attempt($attributes)) {
+            return back()->withErrors(['email' => 'Invalid credentials.']);
+        }
+
+        $request->session()->regenerate();
+
+        // Redirect to the intended page or home
+        return redirect()->intended(route('/'));
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy()
+    {
+        Auth::logout();
+
+        return redirect('/');
+    }
+
 
     /**
      * Display the specified resource.
@@ -50,14 +75,6 @@ class SessionController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
     {
         //
     }

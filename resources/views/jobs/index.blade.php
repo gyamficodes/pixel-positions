@@ -2,9 +2,11 @@
     <div class=" space-y-10">
         <section class=" text-center pt-6">
           <h1 class="  capitalize text-[20px] text-white text-center mb-3 ">let`s find your next job</h1>
-          <div>
-            <input type="text" placeholder="Web Developer..." class=" rounded-xl  border border-white/5 bg-white/5 w-full max-w-lg px-5 py-4">
-          </div>
+        
+
+          <x-forms.form action="/search" class=" mt-6">
+         <x-forms.input :label="false" name="q" placeholder="Web Developer"/>
+         </x-forms.form>
         </section>
    
      <section class="  pt-10">
