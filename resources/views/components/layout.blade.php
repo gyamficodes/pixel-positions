@@ -25,8 +25,13 @@
                 </div>
 
                 @auth
-                <div>
+                <div class=" flex items-center gap-3">
                     <a href="/jobs/create">Post A Job</a>
+                    <form method="POST" action="/logout">
+                        @csrf
+                     @method('DELETE')
+                       <button>Log Out</button>
+                    </form>
                 </div>
                 @endauth
 

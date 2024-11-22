@@ -4,7 +4,7 @@
         <x-forms.input label="Title" name="title" placeholder="CEO" />
         <x-forms.input label="Salary" name="salary" placeholder="$90,000 USD" />
         <x-forms.input label="Location" name="location" placeholder="Winter Park, Florida" />
-        <x-forms.select label="Schedule" name="schedule">
+        <x-forms.select label="type" name="type">
             <option>Part Time</option>
             <option>Full Time</option>
         </x-forms.select>
